@@ -1,16 +1,19 @@
 {
   "compilerOptions": {
-    "target": "ES2016",                  // Ensures compatibility with older environments.
-    "module": "CommonJS",                // Use CommonJS for Node.js compatibility.
-    "outDir": "./dist",                  // Specify output folder for compiled files.
-    "rootDir": "./src",                  // Specify the root directory of input files.
-    "esModuleInterop": true,             // Enable compatibility for CommonJS and ES modules.
-    "strict": true,                      // Enable all strict type-checking options.
-    "forceConsistentCasingInFileNames": true, // Enforce consistent casing in module imports.
-    "skipLibCheck": true,                // Skip type checking for `node_modules`.
-    "resolveJsonModule": true,           // Enable importing JSON files.
-    "sourceMap": true                    // Generate source maps for debugging.
+    "target": "ES2016",
+    "module": "CommonJS",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "esModuleInterop": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "noImplicitAny": true
   },
-  "include": ["src"],                    // Include only the `src` folder for compilation.
-  "exclude": ["node_modules", "dist"]    // Exclude output and dependency directories.
+  "include": ["src"],
+  "exclude": ["node_modules", "dist", "tests"]
 }
