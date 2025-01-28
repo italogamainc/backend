@@ -31,7 +31,9 @@ const handleValidationErrors = (
 
 // GET /tasks
 app.get("/tasks", async (req: Request, res: Response) => {
-  const tasks = await prisma.task.findMany();
+  const tasks = await prisma.task.findMany({
+    orderBy: { createdAt: "desc" },
+  });
   res.json(tasks);
 });
 
