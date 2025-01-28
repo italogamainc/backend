@@ -8,7 +8,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "http://localhost:3001",
+    origin: process.env.FRONTEND_URL,
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type"],
   })
@@ -64,7 +64,7 @@ app.post(
       .withMessage("Title is required")
       .isString()
       .withMessage("Title must be a string")
-      .isLength({ max: 255 })
+      .isLength({ max: 150 })
       .withMessage("Title must not exceed 255 characters"),
     body("color")
       .notEmpty()

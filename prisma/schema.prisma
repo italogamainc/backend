@@ -15,8 +15,8 @@ datasource db {
 
 model Task {
   id        Int      @id @default(autoincrement())
-  title     String
-  color     String
+  title     String   @db.VarChar(150)
+  color     String   @db.VarChar(7)
   completed Boolean  @default(false)
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
